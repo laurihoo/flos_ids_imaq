@@ -7,9 +7,9 @@ class FlosIDSDeviceInfo : public imaqkit::IMAQInterface {
 
 public:
 
-	FlosIDSDeviceInfo(void);
-	~FlosIDSDeviceInfo(void);
+    FlosIDSDeviceInfo(void);
+    ~FlosIDSDeviceInfo(void);
 
-	HIDS m_deviceID;
+    HIDS m_deviceID;
 };
 
