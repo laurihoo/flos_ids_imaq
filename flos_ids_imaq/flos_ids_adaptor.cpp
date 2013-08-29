@@ -50,12 +50,14 @@ imaqkit::frametypes::FRAMETYPE FlosIDSAdaptor::getFrameType()
     return imaqkit::frametypes::BGR24_PACKED; 
 }
 
-bool FlosIDSAdaptor::isAcquisitionActive(void) const { 
+bool FlosIDSAdaptor::isAcquisitionActive(void) const
+{ 
     std::auto_ptr<imaqkit::IAutoCriticalSection> acquisitionActiveSection(imaqkit::createAutoCriticalSection(m_acquisitionActiveGuard, true));
     return m_acquisitionActive; 
 }
 
-void FlosIDSAdaptor::setAcquisitionActive(bool state) {
+void FlosIDSAdaptor::setAcquisitionActive(bool state)
+{
     std::auto_ptr<imaqkit::IAutoCriticalSection> acquisitionActiveSection(imaqkit::createAutoCriticalSection(m_acquisitionActiveGuard, true));
     m_acquisitionActive = state; 
 }
